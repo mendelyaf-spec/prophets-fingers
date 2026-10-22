@@ -67,9 +67,9 @@ blockquote.ostrom footer { margin-top: 1.1rem; font-size: 1rem; }
 
 .prose { display: flex; flex-direction: column; gap: 1.1rem; }
 .prose p { margin: 0; text-wrap: pretty; }
-.prose figure.scan { margin: .4rem auto; display: flex; flex-direction: column; gap: .6rem; max-width: 30rem; }
-.prose figure.scan img { width: 100%; }
-.prose figure.scan figcaption { font: 400 .9rem/1.4 var(--serif); text-align: center; color: var(--soft); }
+.pbody figure.scan, .prose figure.scan { margin: .4rem auto; display: flex; flex-direction: column; gap: .6rem; max-width: 30rem; }
+.pbody figure.scan img, .prose figure.scan img { width: 100%; }
+.pbody figure.scan figcaption, .prose figure.scan figcaption { font: 400 .9rem/1.4 var(--serif); text-align: center; color: var(--soft); }
 hr.mark { border: 0; width: 3.5rem; height: 1px; background: var(--rule); margin: 0 auto; max-width: 3.5rem; }
 
 /* three fronts */
@@ -172,12 +172,12 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
   <section class="sheet"><div class="sheet-in prose">
 <p>Life in the city (and suburb) is possible because of the resources harvested from non-(sub)urban spaces. As sprawl increases the distance between consumers and the resources they depend on, there is a corresponding decrease in the opportunity for consumers to have a hands-on relationship with the source of the materials they depend on.</p>
 <p>A world furnishing little opportunity for a symbiotic relationship with a particular place alienates its inhabitants, thus producing behavior which tends towards the extractive rather than the symbiotic.</p>
-<figure class="scan"><img src="img/alexander_land_ethic.png?v=c6ae2d89" width="1466" height="340" alt="Scanned excerpt from A Pattern Language, pattern 3: the land ethic replaces public parks and campgrounds with the concept of a single countryside."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 38</figcaption></figure>
+<figure class="scan"><img src="img/alexander_land_ethic.png?v=c6ae2d89" width="1466" height="340" alt="Scanned excerpt from A Pattern Language, p. 38: if we treat the land as an instrument for our enjoyment and profit, parks become like Disneyland and farms like factories."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 38</figcaption></figure>
 <p>Symbiotic relationships imply the opportunity to both give and take. The tourist and miner only take, while the conservationist fights to preserve what is. The steward, however, takes to give and gives to take, allowing for no distinction between selfishness and selflessness.</p>
 </div><span class="folio">4</span></section>
 <section class="sheet"><div class="sheet-in prose">
 <p>A parallel problem is the decline of common spaces, held and stewarded by the group it is common to. Instead, nearly all land is either fully private or managed by governmental bodies.</p>
-<figure class="scan"><img src="img/alexander_cluster.png?v=1f3fdb2c" width="1464" height="710" alt="Scanned excerpt from A Pattern Language, pattern 3: the land ethic replaces public parks and campgrounds with the concept of a single countryside."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 198</figcaption></figure>
+<figure class="scan"><img src="img/alexander_cluster.png?v=1f3fdb2c" width="1464" height="710" alt="Scanned excerpt from A Pattern Language, p. 198: people will not feel comfortable in their houses unless a group of houses forms a cluster, with the public land between them jointly owned."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 198</figcaption></figure>
 <p>The social fabric of our communities is greatly enriched when we come together, in reasonably sized groups, to give and take from land that we need and that needs us.</p>
 <p>Common spaces which are neither private nor managed by a centralized governmental body have the power to bring us together in ways which have been largely forgotten in our times.</p>
 </div><span class="folio">5</span></section>
@@ -216,6 +216,7 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
 <details class="project" id="pilot3">
   <summary><span class="pk">Pilot project 3</span><span class="pt">Micro courtyards</span></summary>
   <div class="pbody"><p>Micro courtyards established where four residential house plots meet, eventually opening into green corridors that serve as rights of way connecting one multi-home micro courtyard to another. Each courtyard is governed by its own members. Where courtyards connect, they form a second level of self-governance for the shared corridor.</p>
+<figure class="scan"><img src="img/alexander_ownership.png?v=8fea7eac" width="1770" height="1014" alt="Scanned excerpt from A Pattern Language, p. 201: the deed to one home carries part ownership in its cluster and neighborhood; each level is a political unit."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 201</figcaption></figure>
 <figure class="plate wide"><img src="img/plan1.jpg?v=c7d3c385" width="1800" height="1214" alt="Plan of a suburban block today, with fenced back yards meeting at a circled corner.">
   <figcaption><span class="sc">1 · today.</span> Four fenced back yards meet at a single corner (circled). Red: cars. Yellow: people on foot. Green: gardens. Black and gray: houses.</figcaption></figure>
 <figure class="plate wide"><img src="img/plan2.jpg?v=c8b51138" width="1800" height="1214" alt="The same block with a shared yellow courtyard where four back yards meet, and paths to each back door.">
@@ -224,7 +225,7 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
   <figcaption><span class="sc">3 · courtyards joined by a corridor.</span> Courtyards form at more corners, and a planted strip along the rear lot lines joins them into a green corridor and right of way that crosses the streets to the next block.</figcaption></figure></div>
 </details></div>
     <footer class="end getpdf" id="getpdf">
-      <a class="dl" href="The_Prophets_Fingers.pdf?v=d50dd6a4" download="The Prophets Fingers.pdf">Download the PDF</a>
+      <a class="dl" href="The_Prophets_Fingers.pdf?v=ba71fe3c" download="The Prophets Fingers.pdf">Download the PDF</a>
       <span class="note" id="dlnote" aria-live="polite"></span>
       <span class="contact">mendelyaf [at] gmail [dot] com</span>
     </footer>
