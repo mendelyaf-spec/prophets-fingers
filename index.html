@@ -53,6 +53,9 @@ i, em { font-style: italic; }
 .getpdf button:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .getpdf .note { font: 400 .9rem/1.4 var(--serif); color: var(--soft); }
 .getpdf .note:empty { display: none; }
+.getpdf .copy { font: 400 .85rem/1 var(--serif); color: var(--soft); background: none; border: 1px solid var(--rule);
+  border-radius: 2px; padding: .4rem .7rem; cursor: pointer; }
+.getpdf .copy:hover { color: var(--ink); border-color: var(--ink); }
 .getpdf .contact { font: 400 1rem/1.4 var(--serif); color: var(--ink); user-select: all; }
 
 /* the two quotations, scanned */
@@ -228,7 +231,8 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
     <footer class="end getpdf" id="getpdf">
       <a class="dl" href="The_Prophets_Fingers.pdf?v=8ac8832f" download="The Prophets Fingers.pdf">Download the PDF</a>
       <span class="note" id="dlnote" aria-live="polite"></span>
-      <span class="contact">mendelyaf [at] gmail [dot] com</span>
+      <span class="contact" id="contact" data-u="mendelyaf" data-d="gmail.com">mendelyaf [at] gmail [dot] com</span>
+      <button type="button" class="copy" id="copymail" hidden>Copy email</button>
     </footer>
   </div><span class="folio">8</span></section>
 </main>
@@ -238,6 +242,18 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
 
 <script>
 (async () => {
+  // the address is assembled here, so it never appears whole in the page's source
+  const cm = document.getElementById("contact"), cb = document.getElementById("copymail");
+  if (cm) {
+    const addr = cm.dataset.u + "\u0040" + cm.dataset.d;
+    cm.textContent = addr;
+    cb.hidden = false;
+    cb.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(addr); cb.textContent = "Copied"; }
+      catch (e) { const r = document.createRange(); r.selectNodeContents(cm); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); cb.textContent = "Selected"; }
+      setTimeout(() => { cb.textContent = "Copy email"; }, 2000);
+    });
+  }
   // open a project when the link ends in its name, e.g. #pilot3
   const book = document.querySelector(".page");
   const all = [...book.querySelectorAll(".sheet")];
