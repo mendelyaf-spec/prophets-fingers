@@ -34,7 +34,7 @@ body { overflow: hidden; }
 .page::-webkit-scrollbar { display: none; }
 .sheet { box-sizing: border-box; flex: 0 0 100%; height: 100%; overflow-y: auto; scroll-snap-align: start; scroll-snap-stop: always;
   display: grid; grid-template-rows: 1fr auto; justify-items: center;
-  padding-block: 2.5rem 1rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  padding-block: 2.5rem 4.75rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 .sheet-in { align-self: center; width: 100%; max-width: var(--measure); min-width: 0; }
 .sheet-in.wide, .pbody > .wide { max-width: var(--wide); }
 .folio { font: 400 .85rem/1 var(--serif); color: var(--soft); padding-top: 2rem; font-variant-numeric: lining-nums; }
@@ -146,21 +146,21 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
 <main class="page">
   <h1 class="sr">The Prophet’s Fingers: a roadmap towards the reinstatement of common spaces stewarded by self-governing communities</h1>
 
-  <section class="sheet"><div class="sheet-in cover"><img src="img/title.png" width="1210" height="1908" alt="Title page: The Prophet’s Fingers. A roadmap towards the reinstatement of common spaces stewarded by self-governing communities. In an ornamental border."></div><span></span></section>
+  <section class="sheet"><div class="sheet-in cover"><img src="img/title.png?v=f86f4204" width="1210" height="1908" alt="Title page: The Prophet’s Fingers. A roadmap towards the reinstatement of common spaces stewarded by self-governing communities. In an ornamental border."></div><span></span></section>
 
   <!-- the two quotations sit side by side where they both fit; on a phone each gets its own page -->
   <section class="sheet only-wide"><div class="sheet-in wide pair" aria-label="Two quotations">
-    <figure><img src="img/gibran.png" width="760" height="791" alt="Would that I could gather your houses into my hand, and like a sower scatter them in forest and meadow…">
+    <figure><img src="img/gibran.png?v=47e739e6" width="760" height="791" alt="Would that I could gather your houses into my hand, and like a sower scatter them in forest and meadow…">
       <figcaption>Kahlil Gibran, <i>The Prophet</i> (1923)</figcaption></figure>
-    <figure><img src="img/alexander_combined.png" width="965" height="1639" alt="Pattern 3, City Country Fingers. Continuous sprawling urbanization destroys life, and makes cities unbearable; but the sheer size of cities is also valuable and potent. Therefore: keep interlocking fingers of farmland and urban land, even at the center of the metropolis.">
+    <figure><img src="img/alexander_combined.png?v=0c97d057" width="965" height="1639" alt="Pattern 3, City Country Fingers. Continuous sprawling urbanization destroys life, and makes cities unbearable; but the sheer size of cities is also valuable and potent. Therefore: keep interlocking fingers of farmland and urban land, even at the center of the metropolis.">
       <figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977)</figcaption></figure>
   </div><span class="folio">2</span></section>
   <section class="sheet only-narrow"><div class="sheet-in pair">
-    <figure><img src="img/gibran.png" width="760" height="791" alt="Would that I could gather your houses into my hand, and like a sower scatter them in forest and meadow…">
+    <figure><img src="img/gibran.png?v=47e739e6" width="760" height="791" alt="Would that I could gather your houses into my hand, and like a sower scatter them in forest and meadow…">
       <figcaption>Kahlil Gibran, <i>The Prophet</i> (1923)</figcaption></figure>
   </div><span class="folio"></span></section>
   <section class="sheet only-narrow"><div class="sheet-in pair">
-    <figure><img src="img/alexander_combined.png" width="965" height="1639" alt="Pattern 3, City Country Fingers. Continuous sprawling urbanization destroys life, and makes cities unbearable; but the sheer size of cities is also valuable and potent. Therefore: keep interlocking fingers of farmland and urban land, even at the center of the metropolis.">
+    <figure><img src="img/alexander_combined.png?v=0c97d057" width="965" height="1639" alt="Pattern 3, City Country Fingers. Continuous sprawling urbanization destroys life, and makes cities unbearable; but the sheer size of cities is also valuable and potent. Therefore: keep interlocking fingers of farmland and urban land, even at the center of the metropolis.">
       <figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977)</figcaption></figure>
   </div><span class="folio">2</span></section>
 
@@ -176,7 +176,7 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
 </div><span class="folio">4</span></section>
 <section class="sheet"><div class="sheet-in prose">
 <p>A parallel problem is the decline of common spaces, held and stewarded by the group it is common to. Instead, nearly all land is either fully private or managed by governmental bodies.</p>
-<figure class="scan"><img src="img/alexander_land_ethic.png" width="1468" height="454" alt="Scanned excerpt from A Pattern Language, pattern 3: the land ethic replaces public parks and campgrounds with the concept of a single countryside."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), pattern 3</figcaption></figure>
+<figure class="scan"><img src="img/alexander_land_ethic.png?v=b81b2283" width="1468" height="454" alt="Scanned excerpt from A Pattern Language, pattern 3: the land ethic replaces public parks and campgrounds with the concept of a single countryside."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), pattern 3</figcaption></figure>
 <p>The social fabric of our communities is greatly enriched when we come together, in reasonably sized groups, to give and take from land that we need and that needs us.</p>
 <p>Common spaces which are neither private nor managed by a centralized governmental body have the power to bring us together in ways which have been largely forgotten in our times.</p>
 </div><span class="folio">5</span></section>
@@ -205,25 +205,25 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
   <div class="pbody"><p>Neighborhoods securing code variances to reclaim space from cars for pedestrians, using the process Christopher Alexander lays out in <i>The Nature of Order</i>, Book 3, <i>A Vision of a Living World</i>.</p>
 <p>The neighborhood is mapped in four colors: red for cars, yellow for people on foot, green for gardens and gray for buildings. Variances are then sought step by step to shrink the red and break up its continuity, so that the yellow can grow and the green can take on a coherent shape.</p>
 <div class="pair wide">
-  <figure><img src="img/noo_unhealthy.jpg" width="1090" height="838" alt="Four-colour plan of a few blocks in Berkeley: wide red roads, thin yellow sidewalks, small green yards around gray houses.">
-    <img class="cap-scan" src="img/noo_cap_unhealthy.png" width="1728" height="211" alt="An unhealthy pattern: the 20th-century norm. (Original caption.)"></figure>
-  <figure><img src="img/noo_healthy.jpg" width="968" height="836" alt="Four-colour plan of an imagined neighborhood: a network of yellow paths, coherent green gardens, little red.">
-    <img class="cap-scan" src="img/noo_cap_healthy.png" width="1744" height="209" alt="A new kind of norm: a healthy pattern. (Original caption.)"></figure>
+  <figure><img src="img/noo_unhealthy.jpg?v=80e2fa16" width="1090" height="838" alt="Four-colour plan of a few blocks in Berkeley: wide red roads, thin yellow sidewalks, small green yards around gray houses.">
+    <img class="cap-scan" src="img/noo_cap_unhealthy.png?v=f4b9c630" width="1728" height="211" alt="An unhealthy pattern: the 20th-century norm. (Original caption.)"></figure>
+  <figure><img src="img/noo_healthy.jpg?v=a689fc55" width="968" height="836" alt="Four-colour plan of an imagined neighborhood: a network of yellow paths, coherent green gardens, little red.">
+    <img class="cap-scan" src="img/noo_cap_healthy.png?v=de5e3884" width="1744" height="209" alt="A new kind of norm: a healthy pattern. (Original caption.)"></figure>
 </div>
 <p class="credit">Christopher Alexander, <i>The Nature of Order</i>, Book 3: <i>A Vision of a Living World</i></p></div>
 </details>
 <details class="project" id="pilot3">
   <summary><span class="pk">Pilot project 3</span><span class="pt">Micro courtyards</span></summary>
   <div class="pbody"><p>Micro courtyards established where four residential house plots meet, eventually opening into green corridors that serve as rights of way connecting one multi-home micro courtyard to another. Each courtyard is governed by its own members. Where courtyards connect, they form a second level of self-governance for the shared corridor.</p>
-<figure class="plate wide"><img src="img/plan1.jpg" width="1800" height="1214" alt="Plan of a suburban block today, with fenced back yards meeting at a circled corner.">
+<figure class="plate wide"><img src="img/plan1.jpg?v=c7d3c385" width="1800" height="1214" alt="Plan of a suburban block today, with fenced back yards meeting at a circled corner.">
   <figcaption><span class="sc">1 · today.</span> Four fenced back yards meet at a single corner (circled). Red: cars. Yellow: people on foot. Green: gardens. Black and gray: houses.</figcaption></figure>
-<figure class="plate wide"><img src="img/plan2.jpg" width="1800" height="1214" alt="The same block with a shared yellow courtyard where four back yards meet, and paths to each back door.">
+<figure class="plate wide"><img src="img/plan2.jpg?v=c8b51138" width="1800" height="1214" alt="The same block with a shared yellow courtyard where four back yards meet, and paths to each back door.">
   <figcaption><span class="sc">2 · a micro courtyard.</span> Each of the four plots gives a corner of its back yard to a shared courtyard, reached by a path from each back door.</figcaption></figure>
-<figure class="plate wide"><img src="img/plan3.jpg" width="1800" height="1214" alt="The same block with courtyards at several corners joined by a planted corridor that crosses the side streets.">
+<figure class="plate wide"><img src="img/plan3.jpg?v=7a2dcd56" width="1800" height="1214" alt="The same block with courtyards at several corners joined by a planted corridor that crosses the side streets.">
   <figcaption><span class="sc">3 · courtyards joined by a corridor.</span> Courtyards form at more corners, and a planted strip along the rear lot lines joins them into a green corridor and right of way that crosses the streets to the next block.</figcaption></figure></div>
 </details></div>
     <footer class="end getpdf" id="getpdf">
-      <a class="dl" href="The_Prophets_Fingers.pdf" download="The Prophets Fingers.pdf">Download the PDF</a>
+      <a class="dl" href="The_Prophets_Fingers.pdf?v=d7f38e20" download="The Prophets Fingers.pdf">Download the PDF</a>
       <span class="note" id="dlnote" aria-live="polite"></span>
       <span class="contact">mendelyaf [at] gmail [dot] com</span>
     </footer>
