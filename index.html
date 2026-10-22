@@ -18,6 +18,7 @@
   --soft: #5c5853;
   --rule: #dcd8d1;
   --wash: #f6f4f0;
+  --sheet: #e3cda3;           /* the page colour of the scanned Prophet */
   --serif: "Frank Ruhl Libre", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --book: "EB Garamond", "Garamond", "Iowan Old Style", Georgia, serif;
   --measure: 40rem;
@@ -35,6 +36,8 @@ body { overflow: hidden; }
 .sheet { box-sizing: border-box; flex: 0 0 100%; height: 100%; overflow-y: auto; scroll-snap-align: start; scroll-snap-stop: always;
   display: grid; grid-template-rows: 1fr auto; justify-items: center;
   padding-block: 2.5rem 4.75rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.sheet { background: var(--sheet); }
+.sheet:last-of-type { background: var(--paper); }
 .sheet-in { align-self: center; width: 100%; max-width: var(--measure); min-width: 0; }
 .sheet-in.wide, .pbody > .wide { max-width: var(--wide); }
 .folio { font: 400 .85rem/1 var(--serif); color: var(--soft); padding-top: 2rem; font-variant-numeric: lining-nums; }
@@ -153,21 +156,21 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
 <main class="page">
   <h1 class="sr">The Prophet’s Fingers: a roadmap towards the reinstatement of common spaces stewarded by self-governing communities</h1>
 
-  <section class="sheet"><div class="sheet-in cover"><img src="img/title.png?v=f86f4204" width="1210" height="1908" alt="Title page: The Prophet’s Fingers. A roadmap towards the reinstatement of common spaces stewarded by self-governing communities. In an ornamental border."></div><span></span></section>
+  <section class="sheet"><div class="sheet-in cover"><img src="img/title.png?v=dc1dd4ac" width="1210" height="1908" alt="Title page: The Prophet’s Fingers. A roadmap towards the reinstatement of common spaces stewarded by self-governing communities. In an ornamental border."></div><span></span></section>
 
   <!-- the two quotations sit side by side where they both fit; on a phone each gets its own page -->
   <section class="sheet only-wide"><div class="sheet-in wide pair" aria-label="Two quotations">
-    <figure><img src="img/gibran_full.png?v=f711d950" width="760" height="1015" alt="Then a mason came forth and said, Speak to us of Houses. And he answered and said: … Would that I could gather your houses into my hand, and like a sower scatter them in forest and meadow…">
+    <figure><img src="img/gibran_full.png?v=116f563e" width="760" height="1015" alt="Then a mason came forth and said, Speak to us of Houses. And he answered and said: … Would that I could gather your houses into my hand, and like a sower scatter them in forest and meadow…">
       <figcaption>Kahlil Gibran, <i>The Prophet</i> (1923)</figcaption></figure>
-    <figure><img src="img/alexander_combined.png?v=ff7c874f" width="965" height="1646" alt="Pattern 3, City Country Fingers. Continuous sprawling urbanization destroys life, and makes cities unbearable; but the sheer size of cities is also valuable and potent. Therefore: keep interlocking fingers of farmland and urban land, even at the center of the metropolis.">
+    <figure><img src="img/alexander_combined.png?v=ec005dd7" width="965" height="1646" alt="Pattern 3, City Country Fingers. Continuous sprawling urbanization destroys life, and makes cities unbearable; but the sheer size of cities is also valuable and potent. Therefore: keep interlocking fingers of farmland and urban land, even at the center of the metropolis.">
       <figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977)</figcaption></figure>
   </div><span class="folio">2</span></section>
   <section class="sheet only-narrow"><div class="sheet-in pair">
-    <figure><img src="img/gibran_full.png?v=f711d950" width="760" height="1015" alt="Then a mason came forth and said, Speak to us of Houses. And he answered and said: … Would that I could gather your houses into my hand, and like a sower scatter them in forest and meadow…">
+    <figure><img src="img/gibran_full.png?v=116f563e" width="760" height="1015" alt="Then a mason came forth and said, Speak to us of Houses. And he answered and said: … Would that I could gather your houses into my hand, and like a sower scatter them in forest and meadow…">
       <figcaption>Kahlil Gibran, <i>The Prophet</i> (1923)</figcaption></figure>
   </div><span class="folio"></span></section>
   <section class="sheet only-narrow"><div class="sheet-in pair">
-    <figure><img src="img/alexander_combined.png?v=ff7c874f" width="965" height="1646" alt="Pattern 3, City Country Fingers. Continuous sprawling urbanization destroys life, and makes cities unbearable; but the sheer size of cities is also valuable and potent. Therefore: keep interlocking fingers of farmland and urban land, even at the center of the metropolis.">
+    <figure><img src="img/alexander_combined.png?v=ec005dd7" width="965" height="1646" alt="Pattern 3, City Country Fingers. Continuous sprawling urbanization destroys life, and makes cities unbearable; but the sheer size of cities is also valuable and potent. Therefore: keep interlocking fingers of farmland and urban land, even at the center of the metropolis.">
       <figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977)</figcaption></figure>
   </div><span class="folio">2</span></section>
 
@@ -179,12 +182,12 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
   <section class="sheet"><div class="sheet-in prose">
 <p>Life in the city (and suburb) is possible because of the resources harvested from non-(sub)urban spaces. As sprawl increases the distance between consumers and the resources they depend on, there is a corresponding decrease in the opportunity for consumers to have a hands-on relationship with the source of the materials they depend on.</p>
 <p>A world furnishing little opportunity for a symbiotic relationship with a particular place alienates its inhabitants, thus producing behavior which tends towards the extractive rather than the symbiotic.</p>
-<figure class="scan"><img src="img/alexander_land_ethic.png?v=c6ae2d89" width="1466" height="340" alt="Scanned excerpt from A Pattern Language, p. 38: if we treat the land as an instrument for our enjoyment and profit, parks become like Disneyland and farms like factories."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 38</figcaption></figure>
+<figure class="scan"><img src="img/alexander_land_ethic.png?v=9cd87518" width="1466" height="340" alt="Scanned excerpt from A Pattern Language, p. 38: if we treat the land as an instrument for our enjoyment and profit, parks become like Disneyland and farms like factories."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 38</figcaption></figure>
 <p>Symbiotic relationships imply the opportunity to both give and take. The tourist and miner only take, while the conservationist fights to preserve what is. The steward, however, takes to give and gives to take, allowing for no distinction between selfishness and selflessness.</p>
 </div><span class="folio">4</span></section>
 <section class="sheet"><div class="sheet-in prose">
 <p>A parallel problem is the decline of common spaces, held and stewarded by the group it is common to. Instead, nearly all land is either fully private or managed by governmental bodies.</p>
-<figure class="scan"><img src="img/alexander_cluster.png?v=1f3fdb2c" width="1464" height="710" alt="Scanned excerpt from A Pattern Language, p. 198: people will not feel comfortable in their houses unless a group of houses forms a cluster, with the public land between them jointly owned."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 198</figcaption></figure>
+<figure class="scan"><img src="img/alexander_cluster.png?v=2211f9f4" width="1464" height="710" alt="Scanned excerpt from A Pattern Language, p. 198: people will not feel comfortable in their houses unless a group of houses forms a cluster, with the public land between them jointly owned."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 198</figcaption></figure>
 <p>The social fabric of our communities is greatly enriched when we come together, in reasonably sized groups, to give and take from land that we need and that needs us.</p>
 <p>Common spaces which are neither private nor managed by a centralized governmental body have the power to bring us together in ways which have been largely forgotten in our times.</p>
 </div><span class="folio">5</span></section>
@@ -199,7 +202,7 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
 </div><span class="folio">7</span></section>
 
   <section class="sheet" id="fronts"><div class="sheet-in fronts">
-    <p class="tf"><img src="img/therefore.png?v=2346b16d" width="453" height="90" alt="Therefore:"></p>
+    <p class="tf"><img src="img/therefore.png?v=746418a8" width="453" height="90" alt="Therefore:"></p>
     <ul class="therefore"><li>Identify spaces, however small, which are good candidates for communally managed plots stewarded by self-governing communities.</li><li>Recruit locals and provide educational and material resources relevant to the projects they commit to.</li></ul>
 <p>The following three projects lay the groundwork for broader implementation of the City Country Fingers pattern by establishing small working examples embodying its underlying principle.</p>
     <div class="projects"><details class="project" id="pilot1">
@@ -212,9 +215,9 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
 <p>The neighborhood is mapped in four colors: red for cars, yellow for people on foot, green for gardens and gray for buildings. Variances are then sought step by step to shrink the red and break up its continuity, so that the yellow can grow and the green can take on a coherent shape.</p>
 <div class="pair wide">
   <figure><img src="img/noo_unhealthy.jpg?v=80e2fa16" width="1090" height="838" alt="Four-colour plan of a few blocks in Berkeley: wide red roads, thin yellow sidewalks, small green yards around gray houses.">
-    <img class="cap-scan" src="img/noo_cap_unhealthy.png?v=f4b9c630" width="1728" height="211" alt="An unhealthy pattern: the 20th-century norm. (Original caption.)"></figure>
+    <img class="cap-scan" src="img/noo_cap_unhealthy.png?v=4a97d5fc" width="1728" height="211" alt="An unhealthy pattern: the 20th-century norm. (Original caption.)"></figure>
   <figure><img src="img/noo_healthy.jpg?v=a689fc55" width="968" height="836" alt="Four-colour plan of an imagined neighborhood: a network of yellow paths, coherent green gardens, little red.">
-    <img class="cap-scan" src="img/noo_cap_healthy.png?v=de5e3884" width="1744" height="209" alt="A new kind of norm: a healthy pattern. (Original caption.)"></figure>
+    <img class="cap-scan" src="img/noo_cap_healthy.png?v=7e9910e1" width="1744" height="209" alt="A new kind of norm: a healthy pattern. (Original caption.)"></figure>
 </div>
 <p class="credit">Christopher Alexander, <i>The Nature of Order</i>, Book 3: <i>A Vision of a Living World</i></p></div>
 </details>
@@ -227,10 +230,10 @@ footer.end { text-align: center; display: flex; flex-direction: column; gap: 1re
   <figcaption><span class="sc">2 · a micro courtyard.</span> Each of the four plots gives a corner of its back yard to a shared courtyard, reached by a path from each back door.</figcaption></figure>
 <figure class="plate wide"><img src="img/plan3.jpg?v=7a2dcd56" width="1800" height="1214" alt="The same block with courtyards at several corners joined by a planted corridor that crosses the side streets.">
   <figcaption><span class="sc">3 · courtyards joined by a corridor.</span> Courtyards form at more corners, and a planted strip along the rear lot lines joins them into a green corridor and right of way that crosses the streets to the next block.</figcaption></figure>
-<figure class="scan"><img src="img/alexander_ownership.png?v=8fea7eac" width="1770" height="1014" alt="Scanned excerpt from A Pattern Language, p. 201: the deed to one home carries part ownership in its cluster and neighborhood; each level is a political unit."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 201</figcaption></figure></div>
+<figure class="scan"><img src="img/alexander_ownership.png?v=64d908a5" width="1770" height="1014" alt="Scanned excerpt from A Pattern Language, p. 201: the deed to one home carries part ownership in its cluster and neighborhood; each level is a political unit."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 201</figcaption></figure></div>
 </details></div>
     <footer class="end getpdf" id="getpdf">
-      <a class="dl" href="The_Prophets_Fingers.pdf?v=3ec7fd46" download="The Prophets Fingers.pdf">Download the PDF</a>
+      <a class="dl" href="The_Prophets_Fingers.pdf?v=e109542d" download="The Prophets Fingers.pdf">Download the PDF</a>
       <span class="note" id="dlnote" aria-live="polite"></span>
       <span class="contact" id="contact" data-u="mendelyaf" data-d="gmail.com">mendelyaf [at] gmail [dot] com</span>
       <button type="button" class="copy" id="copymail" hidden>Copy email</button>
