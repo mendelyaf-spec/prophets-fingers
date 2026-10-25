@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="City Country Fingers, and three pilot projects for common spaces stewarded by self-governing communities.">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Prophet’s Fingers</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Frank+Ruhl+Libre:wght@400;600;900&display=swap">
+<style>
+/* Layout: one reading column like the printed pages, figures allowed to run wider; white paper, black ink, as the PDF. */
+:root {
+  --paper: #ffffff;
+  --ink: #141312;
+  --soft: #5c5853;
+  --rule: #dcd8d1;
+  --wash: #f6f4f0;
+  --sheet: #e3cda3;           /* the page colour of the scanned Prophet */
+  --serif: "Frank Ruhl Libre", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --book: "EB Garamond", "Garamond", "Iowan Old Style", Georgia, serif;
+  --measure: 40rem;
+  --wide: 66rem;
+  color-scheme: light;
+}
+body { background: var(--paper); color: var(--ink); font-family: var(--serif); font-weight: 600;
+  font-size: 1.075rem; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+/* pages side by side; swipe sideways to turn, scroll down inside a page that is taller than the screen */
+html, body { height: 100%; }
+body { overflow: hidden; }
+.page { height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); display: flex;
+  overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.page::-webkit-scrollbar { display: none; }
+.sheet { box-sizing: border-box; flex: 0 0 100%; height: 100%; overflow-y: auto; scroll-snap-align: start; scroll-snap-stop: always;
+  display: grid; grid-template-rows: 1fr auto; justify-items: center;
+  padding-block: 2.5rem 4.75rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+/* each page its own sheet of scanned paper (blank pages of the 1951 Knopf Prophet) */
+.sheet { background: var(--sheet) center / cover no-repeat; }
+.sheet:nth-of-type(6n+1) { background-image: url("img/paper/p0.jpg"); }
+.sheet:nth-of-type(6n+2) { background-image: url("img/paper/p1.jpg"); }
+.sheet:nth-of-type(6n+3) { background-image: url("img/paper/p2.jpg"); }
+.sheet:nth-of-type(6n+4) { background-image: url("img/paper/p3.jpg"); }
+.sheet:nth-of-type(6n+5) { background-image: url("img/paper/p4.jpg"); }
+.sheet:nth-of-type(6n+6) { background-image: url("img/paper/p5.jpg"); }
+@media (min-aspect-ratio: 1/1) {
+  .sheet:nth-of-type(6n+1) { background-image: url("img/paper/l0.jpg"); }
+  .sheet:nth-of-type(6n+2) { background-image: url("img/paper/l1.jpg"); }
+  .sheet:nth-of-type(6n+3) { background-image: url("img/paper/l2.jpg"); }
+  .sheet:nth-of-type(6n+4) { background-image: url("img/paper/l3.jpg"); }
+  .sheet:nth-of-type(6n+5) { background-image: url("img/paper/l4.jpg"); }
+  .sheet:nth-of-type(6n+6) { background-image: url("img/paper/l5.jpg"); }
+}.sheet:first-of-type { background-image: url("img/paper/title.jpg") !important; }   /* the title page: yellowed like page 5 */
+
+.sheet-in { align-self: center; width: 100%; max-width: var(--measure); min-width: 0; }
+.sheet-in.wide, .pbody > .wide { max-width: var(--wide); }
+.folio { font: 400 .85rem/1 var(--serif); color: var(--soft); padding-top: 2rem; font-variant-numeric: lining-nums; }
+img { display: block; max-width: 100%; height: auto; }
+i, em { font-style: italic; }
+
+/* title page */
+.sheet-in.cover { max-width: 34rem; display: flex; justify-content: center; }
+.cover img { width: auto; max-height: 84svh; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.getpdf { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem 1rem; }
+.getpdf button { font: 600 1rem/1 var(--serif); color: var(--paper); background: var(--ink); border: 0;
+  border-radius: 2px; padding: .85rem 1.4rem; cursor: pointer; }
+.getpdf button:hover { background: #333; }
+.getpdf button:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.getpdf .note { font: 400 .9rem/1.4 var(--serif); color: var(--soft); }
+.getpdf .note:empty { display: none; }
+.getpdf .copy { font: 400 .85rem/1 var(--serif); color: var(--soft); background: none; border: 1px solid var(--rule);
+  border-radius: 2px; padding: .4rem .7rem; cursor: pointer; }
+.getpdf .copy:hover { color: var(--ink); border-color: var(--ink); }
+.getpdf .contact { font: 400 1rem/1.4 var(--serif); color: var(--ink); user-select: all; }
+
+/* the two quotations, scanned */
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 2.5rem 2.25rem; align-items: end; }
+.pair figure { margin: 0; display: flex; flex-direction: column; gap: .8rem; min-width: 0; }
+.pair figcaption { font: 400 .92rem/1.4 var(--serif); text-align: center; color: var(--soft); }
+.cap-scan { width: 100%; }
+
+blockquote.ostrom { margin: 0; text-align: center; font-weight: 400; font-size: 1.1rem; line-height: 1.75; text-wrap: pretty; }
+blockquote.ostrom p { margin: 0 0 .9rem; }
+blockquote.ostrom footer { margin-top: 1.1rem; font-size: 1rem; }
+
+.prose { display: flex; flex-direction: column; gap: 1.1rem; }
+.prose p { margin: 0; text-wrap: pretty; }
+.pbody figure.scan, .prose figure.scan { margin: .4rem auto; display: flex; flex-direction: column; gap: .6rem; max-width: 30rem; }
+.pbody figure.scan img, .prose figure.scan img { width: 100%; }
+.pbody figure.scan figcaption, .prose figure.scan figcaption { font: 400 .9rem/1.4 var(--serif); text-align: center; color: var(--soft); }
+hr.mark { border: 0; width: 3.5rem; height: 1px; background: var(--rule); margin: 0 auto; max-width: 3.5rem; }
+
+/* three fronts */
+.fronts { display: flex; flex-direction: column; gap: 1.6rem; }
+.fronts > p { margin: 0; }
+.fronts > .tf { margin: 0 0 calc(1.7em - 1.6rem); }   /* one blank line after "Therefore:" */
+.fronts > .tf img { width: 7.2rem; height: auto; display: block; }
+ul.therefore { margin: 0; padding-left: 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
+ul.therefore li { display: list-item; padding-left: .2rem; }
+.fronts ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+.fronts li { display: grid; grid-template-columns: 2rem 1fr; }
+.fronts li > div { min-width: 0; }
+.fn { font-weight: 600; }
+.fronts h3 { margin: 0 0 .2rem; font: 600 1rem/1.6 var(--serif); letter-spacing: .08em; }
+.fronts li p { margin: 0; }
+.leadin { margin-left: 2rem; }
+
+/* pilot projects: tap to open */
+.projects { display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
+.project { border-bottom: 1px solid var(--rule); }
+summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1.4rem 1fr; align-items: baseline;
+  padding: 1rem .25rem; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: ""; width: 0; height: 0; border-left: .55rem solid var(--ink); border-top: .36rem solid transparent;
+  border-bottom: .36rem solid transparent; transition: transform .2s ease; transform-origin: 30% 50%; align-self: center; }
+details[open] > summary::before { transform: rotate(90deg); }
+.pk { grid-column: 2; font: 400 .74rem/1.2 var(--serif); letter-spacing: .22em; text-transform: uppercase; color: var(--soft); }
+.pt { grid-column: 2; font: 900 1.45rem/1.3 var(--serif); text-wrap: balance; }
+summary:hover .pt { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.pbody { padding: .2rem 0 2.2rem 1.65rem; display: flex; flex-direction: column; gap: 1.6rem; }
+.pbody p { margin: 0; }
+.credit { font: 400 .95rem/1.5 var(--serif); text-align: center; color: var(--soft); }
+.plate { margin: 0; display: flex; flex-direction: column; gap: .7rem; }
+.plate img { width: 100%; border: 1px solid var(--rule); }
+.plate figcaption { font: italic 400 1rem/1.45 var(--book); text-align: center; text-wrap: pretty; }
+.sc { font-style: normal; font-variant: small-caps; letter-spacing: .04em; text-transform: lowercase; margin-right: .3em; }
+
+/* project bodies can run wider than the list on big screens */
+@media (min-width: 60rem) {
+  .projects { margin-left: 0; width: 100%; }
+  .pbody { padding-left: 1.65rem; }
+  .pbody > .wide { width: min(var(--wide), calc(100vw - 4rem)); margin-left: calc((var(--measure) - min(var(--wide), calc(100vw - 4rem))) / 2 - 1.65rem); }
+}
+@media (max-width: 30rem) {
+  body { font-size: 1.02rem; }
+  .projects { margin-left: 0; width: 100%; }
+  .pbody { padding-left: 0; }
+  .fronts li { grid-template-columns: 1.7rem 1fr; }
+  .leadin { margin-left: 1.7rem; }
+}
+@media (prefers-reduced-motion: reduce) { summary::before { transition: none; } }
+/* page-turn arrows */
+.turn { position: fixed; bottom: calc(env(safe-area-inset-bottom, 0px) + .6rem); z-index: 5; width: 2.75rem; height: 2.75rem;
+  border-radius: 50%; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); cursor: pointer;
+  font: 400 1.5rem/1 var(--serif); display: grid; place-items: center; padding: 0 0 .15rem; }
+.turn:hover { border-color: var(--ink); }
+.turn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.turn.prev { left: max(.75rem, env(safe-area-inset-left, 0px)); }
+.turn.next { right: max(.75rem, env(safe-area-inset-right, 0px)); }
+.only-wide { display: none; }
+@media (min-width: 48rem) { .only-wide { display: grid; } .only-narrow { display: none; } }
+/* progress dots: one per page, the current one filled; they stand in for page numbers here */
+.folio { visibility: hidden; }
+.dots { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(env(safe-area-inset-bottom, 0px) + 1.2rem);
+  z-index: 5; display: flex; gap: .1rem; }
+.dots button { width: 1.15rem; height: 1.15rem; padding: .32rem; border: 0; border-radius: 50%; cursor: pointer;
+  background: var(--rule); background-clip: content-box; }
+.dots button[aria-current="true"] { background-color: var(--ink); }
+.dots button:focus-visible { outline: 2px solid var(--ink); outline-offset: 0; }
+.hint { font: 400 .85rem/1.3 var(--serif); color: var(--soft); padding-top: 1.4rem; }
+
+footer.end { text-align: center; display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-top: 3.5rem; }
+</style>
+
+</head>
+<body>
+<main class="page">
+  <h1 class="sr">The Prophet’s Fingers: City Country Fingers</h1>
+
+  <section class="sheet"><div class="sheet-in pair"><figure><img src="img/alexander_cityfingers.png?v=b6ec3bd2" width="965" height="1586" alt="Pattern 3, City Country Fingers. Continuous sprawling urbanization destroys life, and makes cities unbearable; but the sheer size of cities is also valuable and potent. Keep interlocking fingers of farmland and urban land, even at the center of the metropolis."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977)</figcaption></figure></div><span class="folio">1</span></section>
+
+  <section class="sheet" id="fronts"><div class="sheet-in fronts">
+    <ul class="therefore"><li>Identify spaces, however small, which are good candidates for communally managed plots stewarded by self-governing communities.</li><li>Recruit locals and provide educational and material resources relevant to the projects they commit to.</li></ul>
+<p>The following three projects lay the groundwork for broader implementation of the City Country Fingers pattern by establishing small working examples embodying its underlying principle.</p>
+    <div class="projects"><details class="project" id="pilot1">
+  <summary><span class="pk">Pilot project 1</span><span class="pt">POWER LINE GARDENS</span></summary>
+  <div class="pbody"><p>Coordinating between power companies and the neighbors whose residences abut or are near power lines to manage the growth of the area under the lines through community gardens. Shares of plant stock, produce and, where applicable, animal products are divided among the members of the collective, who together establish protocols for managing those spaces.</p></div>
+</details>
+<details class="project" id="pilot2">
+  <summary><span class="pk">Pilot project 2</span><span class="pt">RECLAIMING ASPHALT</span></summary>
+  <div class="pbody"><p>Neighborhoods securing code variances to reclaim space from cars for pedestrians, using the process Christopher Alexander lays out in <i>The Nature of Order</i>, Book 3, <i>A Vision of a Living World</i>.</p>
+<p>The neighborhood is mapped in four colors: red for cars, yellow for people on foot, green for gardens and gray for buildings. Variances are then sought step by step to shrink the red and break up its continuity, so that the yellow can grow and the green can take on a coherent shape.</p>
+<div class="pair wide">
+  <figure><img src="img/noo_unhealthy.jpg?v=80e2fa16" width="1090" height="838" alt="Four-colour plan of a few blocks in Berkeley: wide red roads, thin yellow sidewalks, small green yards around gray houses.">
+    <img class="cap-scan" src="img/noo_cap_unhealthy.png?v=4a97d5fc" width="1728" height="211" alt="An unhealthy pattern: the 20th-century norm. (Original caption.)"></figure>
+  <figure><img src="img/noo_healthy.jpg?v=a689fc55" width="968" height="836" alt="Four-colour plan of an imagined neighborhood: a network of yellow paths, coherent green gardens, little red.">
+    <img class="cap-scan" src="img/noo_cap_healthy.png?v=7e9910e1" width="1744" height="209" alt="A new kind of norm: a healthy pattern. (Original caption.)"></figure>
+</div>
+<p class="credit">Christopher Alexander, <i>The Nature of Order</i>, Book 3: <i>A Vision of a Living World</i></p></div>
+</details>
+<details class="project" id="pilot3">
+  <summary><span class="pk">Pilot project 3</span><span class="pt">MICRO COURTYARDS</span></summary>
+  <div class="pbody"><p>Micro courtyards established where four residential house plots meet, eventually opening into green corridors that serve as rights of way connecting one multi-home micro courtyard to another. Each courtyard is governed by its own members. Where courtyards connect, they form a second level of self-governance for the shared corridor.</p>
+<figure class="plate wide"><img src="img/plan1.jpg?v=c7d3c385" width="1800" height="1214" alt="Plan of a suburban block today, with fenced back yards meeting at a circled corner.">
+  <figcaption><span class="sc">1 · today.</span> Four fenced back yards meet at a single corner (circled). Red: cars. Yellow: people on foot. Green: gardens. Black and gray: houses.</figcaption></figure>
+<figure class="plate wide"><img src="img/plan2.jpg?v=c8b51138" width="1800" height="1214" alt="The same block with a shared yellow courtyard where four back yards meet, and paths to each back door.">
+  <figcaption><span class="sc">2 · a micro courtyard.</span> Each of the four plots gives a corner of its back yard to a shared courtyard, reached by a path from each back door.</figcaption></figure>
+<figure class="plate wide"><img src="img/plan3.jpg?v=7a2dcd56" width="1800" height="1214" alt="The same block with courtyards at several corners joined by a planted corridor that crosses the side streets.">
+  <figcaption><span class="sc">3 · courtyards joined by a corridor.</span> Courtyards form at more corners, and a planted strip along the rear lot lines joins them into a green corridor and right of way that crosses the streets to the next block.</figcaption></figure>
+<figure class="scan"><img src="img/alexander_ownership.png?v=64d908a5" width="1770" height="1014" alt="Scanned excerpt from A Pattern Language, p. 201: the deed to one home carries part ownership in its cluster and neighborhood; each level is a political unit."><figcaption>Christopher Alexander, <i>A Pattern Language</i> (1977), p. 201</figcaption></figure></div>
+</details></div>
+    <footer class="end getpdf" id="getpdf">
+      <span class="contact" id="contact" data-u="mendelyaf" data-d="gmail.com">mendelyaf [at] gmail [dot] com</span>
+      <button type="button" class="copy" id="copymail" hidden>Copy email</button>
+    </footer>
+  </div><span class="folio">2</span></section>
+</main>
+
+<button type="button" class="turn prev" id="prev" aria-label="Previous page" hidden>&lsaquo;</button>
+<button type="button" class="turn next" id="next" aria-label="Next page">&rsaquo;</button>
+<nav class="dots" id="dots" aria-label="Pages"></nav>
+
+<script>
+(async () => {
+  // the address is assembled here, so it never appears whole in the page's source
+  const cm = document.getElementById("contact"), cb = document.getElementById("copymail");
+  if (cm) {
+    const addr = cm.dataset.u + "\u0040" + cm.dataset.d;
+    cm.textContent = addr;
+    cb.hidden = false;
+    cb.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(addr); cb.textContent = "Copied"; }
+      catch (e) { const r = document.createRange(); r.selectNodeContents(cm); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); cb.textContent = "Selected"; }
+      setTimeout(() => { cb.textContent = "Copy email"; }, 2000);
+    });
+  }
+  // open a project when the link ends in its name, e.g. #pilot3
+  const book = document.querySelector(".page");
+  const all = [...book.querySelectorAll(".sheet")];
+  const visible = () => all.filter(el => el.getClientRects().length > 0);
+  const prev = document.getElementById("prev"), next = document.getElementById("next");
+  const current = () => Math.round(book.scrollLeft / book.clientWidth);
+  const go = (i) => { i = Math.max(0, Math.min(visible().length - 1, i));
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    book.scrollTo({ left: i * book.clientWidth, behavior: reduce ? "auto" : "smooth" }); };
+  const dots = document.getElementById("dots");
+  const sync = () => {
+    const i = current(), n = visible().length;
+    prev.hidden = i === 0; next.hidden = i === n - 1;
+    if (dots.children.length !== n) {
+      dots.replaceChildren(...Array.from({ length: n }, (_, k) => {
+        const b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", "Page " + (k + 1));
+        b.addEventListener("click", () => go(k)); return b; }));
+    }
+    [...dots.children].forEach((b, k) => b.setAttribute("aria-current", k === i ? "true" : "false"));
+  };
+  prev.addEventListener("click", () => go(current() - 1));
+  next.addEventListener("click", () => go(current() + 1));
+  book.addEventListener("scroll", () => requestAnimationFrame(sync), { passive: true });
+  addEventListener("resize", () => { go(current()); sync(); });
+  addEventListener("keydown", (e) => {
+    if (e.target.closest && e.target.closest("input, textarea")) return;
+    if (e.key === "ArrowRight" || e.key === "PageDown") { e.preventDefault(); go(current() + 1); }
+    if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); go(current() - 1); }
+  });
+  // open a project when the link ends in its name, e.g. #pilot3
+  const h = location.hash.slice(1);
+  if (h) { const d = document.getElementById(h);
+    if (d) { if (d.tagName === "DETAILS") d.open = true;
+      const sh = d.closest(".sheet"); go(visible().indexOf(sh)); setTimeout(() => d.scrollIntoView({ block: "start" }), 400); } }
+  sync();
+
+})();
+</script>
+
+</body>
+</html>
